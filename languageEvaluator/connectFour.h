@@ -1,0 +1,11 @@
+uint32_t get_random();
+uint32_t random_in_range(uint32_t low, uint32_t high);
+void setupBoard();
+void printBoard(char * board);
+int humanTurn(char * board);
+int computerTurn(char * board);
+int dropToken(char * board, int colNum);
+int gameLoop(int firstPlayer, char * board);
+int checkWin(char * board, int lastCell);
+int isFull(char * board);
+int checkDirection(char * board, int direction, int lastCell);
