@@ -1,0 +1,215 @@
+Line: 3 * (5 + 10 / 3 -1)
+Tokens: 
+3 : Number
+* : Symbol
+( : Symbol
+5 : Number
++ : Symbol
+10 : Number
+/ : Symbol
+3 : Number
+- : Symbol
+1 : Number
+) : Symbol
+AST: 
+* : Symbol
+	3 : Number
+	+ : Symbol
+		5 : Number
+		- : Symbol
+			/ : Symbol
+				10 : Number
+				3 : Number
+			1 : Number
+Result is: 21
+
+Line: 3 - 10
+Tokens: 
+3 : Number
+- : Symbol
+10 : Number
+AST: 
+- : Symbol
+	3 : Number
+	10 : Number
+Result is: 0
+
+Line: 3/10
+Tokens: 
+3 : Number
+/ : Symbol
+10 : Number
+AST: 
+/ : Symbol
+	3 : Number
+	10 : Number
+Result is: 0
+
+Line: 4 + 3 - 2
+Tokens: 
+4 : Number
++ : Symbol
+3 : Number
+- : Symbol
+2 : Number
+AST: 
++ : Symbol
+	4 : Number
+	- : Symbol
+		3 : Number
+		2 : Number
+Result is: 5
+
+Line: 6 * 4 + 10
+Tokens: 
+6 : Number
+* : Symbol
+4 : Number
++ : Symbol
+10 : Number
+AST: 
++ : Symbol
+	* : Symbol
+		6 : Number
+		4 : Number
+	10 : Number
+Result is: 34
+
+Line: 30 / 3 / 4
+Tokens: 
+30 : Number
+/ : Symbol
+3 : Number
+/ : Symbol
+4 : Number
+AST: 
+/ : Symbol
+	/ : Symbol
+		30 : Number
+		3 : Number
+	4 : Number
+Result is: 2
+
+Line: 10 * 2 - 10 / 3
+Tokens: 
+10 : Number
+* : Symbol
+2 : Number
+- : Symbol
+10 : Number
+/ : Symbol
+3 : Number
+AST: 
+- : Symbol
+	* : Symbol
+		10 : Number
+		2 : Number
+	/ : Symbol
+		10 : Number
+		3 : Number
+Result is: 17
+
+Line: (1 + 12 - 2 * 4) + 6 - 8 * 2 / 4 + 2
+Tokens: 
+( : Symbol
+1 : Number
++ : Symbol
+12 : Number
+- : Symbol
+2 : Number
+* : Symbol
+4 : Number
+) : Symbol
++ : Symbol
+6 : Number
+- : Symbol
+8 : Number
+* : Symbol
+2 : Number
+/ : Symbol
+4 : Number
++ : Symbol
+2 : Number
+AST: 
++ : Symbol
+	+ : Symbol
+		+ : Symbol
+			1 : Number
+			- : Symbol
+				12 : Number
+				* : Symbol
+					2 : Number
+					4 : Number
+		- : Symbol
+			6 : Number
+			/ : Symbol
+				* : Symbol
+					8 : Number
+					2 : Number
+				4 : Number
+	2 : Number
+Result is: 9
+
+Line: 15 + 3426
+Tokens: 
+15 : Number
++ : Symbol
+3426 : Number
+AST: 
++ : Symbol
+	15 : Number
+	3426 : Number
+Result is: 3441
+
+Line: 015 - 3426
+Tokens: 
+015 : Number
+- : Symbol
+3426 : Number
+AST: 
+- : Symbol
+	015 : Number
+	3426 : Number
+Result is: 0
+
+Line: 5 / 5
+Tokens: 
+5 : Number
+/ : Symbol
+5 : Number
+AST: 
+/ : Symbol
+	5 : Number
+	5 : Number
+Result is: 1
+
+Line: 20 * 418
+Tokens: 
+20 : Number
+* : Symbol
+418 : Number
+AST: 
+* : Symbol
+	20 : Number
+	418 : Number
+Result is: 8360
+
+Line: 2 * 3 + 5 / 4
+Tokens: 
+2 : Number
+* : Symbol
+3 : Number
++ : Symbol
+5 : Number
+/ : Symbol
+4 : Number
+AST: 
++ : Symbol
+	* : Symbol
+		2 : Number
+		3 : Number
+	/ : Symbol
+		5 : Number
+		4 : Number
+Result is: 7
+
